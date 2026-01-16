@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: "Segoe UI", Arial, sans-serif;
-            background: #3b2f2f;
+            background: background: #f9f9f9;
             color: #3b2f2f;
         }
 
@@ -52,7 +52,7 @@
 
         /* Header */
         .header {
-            margin-top: 100px;
+            margin-top: 70px;
             margin-bottom: 40px;
         }
 
