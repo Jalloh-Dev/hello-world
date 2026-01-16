@@ -153,7 +153,7 @@
     <div class="content">
 
         <!-- LEFT COLUMN -->
-        <div class="left-column">
+        <div class="left-column" style="line-height: 1.15;">
 
             <div class="section">
                 <h2>CONTACT</h2>
