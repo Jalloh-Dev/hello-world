@@ -52,6 +52,7 @@
 
         /* Header */
         .header {
+            margin-top: 100px;
             margin-bottom: 40px;
         }
 
