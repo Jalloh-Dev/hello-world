@@ -131,7 +131,7 @@
     <div class="top-circle"></div>
 
     <div class="profile-image">
-        <img src="myimage.jpg" alt="Profile Picture">
+        <img src="My_Image.png" alt="Profile Picture">
     </div>
 
     <div class="header">
