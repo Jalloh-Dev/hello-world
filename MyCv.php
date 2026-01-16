@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: "Segoe UI", Arial, sans-serif;
-            background: #ffffff;
+            background: #3b2f2f;
             color: #3b2f2f;
         }
 
