@@ -1,3 +1,79 @@
+<?php
+// cv.php
+
+// Basic Info
+$name = "ALHAJI IBRAHIM<br>JALLOH";
+$title = "BSc (Hons) Information<br>Systems Graduate (First Class)";
+$phone = "+232 80003035";
+$email = "alhajiibrahimjalloh55@gmail.com";
+$location = "Freetown, Sierra Leone";
+$profile_image = "My_Image.png";
+
+// Education
+$education = [
+    [
+        "degree" => "Bachelor of Science With<br>Honours in Information Systems",
+        "school" => "IPAM - University of Sierra Leone",
+        "years" => "2021 - 2025 (Graduated December 2025)"
+    ],
+    [
+        "degree" => "BECE and WASSCE",
+        "school" => "Holy Trinity Secondary School,<br>Kenema",
+        "years" => "2015 - 2021"
+    ]
+];
+
+// Skills
+$skills = [
+    "Web Development",
+    "Database Management",
+    "Problem-Solving and Critical Thinking",
+    "Leadership & Team Coordination",
+    "Microsoft Office Suite"
+];
+
+// Languages
+$languages = [
+    "Fula (Native)",
+    "English (Fluent)",
+    "Krio (Fluent)"
+];
+
+// Profile
+$profile_paragraphs = [
+    "A motivated and results-driven BSc (Hons) Information Systems (First Class)
+    graduate from the Institute of Public Administration and Management (IPAM)–University
+    of Sierra Leone, with a strong interest in technology, innovation, and continuous learning.
+    As one of the youngest graduates in my cohort, I demonstrate adaptability, resilience,
+    and a proactive approach to problem-solving.",
+    "I have a solid academic foundation in web development, database management, and
+    information systems, developed through university coursework, self-directed learning,
+    and hands-on tutorials. I am highly organised, a strong team player, and proficient
+    in the Microsoft Office Suite, enabling me to contribute effectively in both technical
+    and professional environments."
+];
+
+// Experience
+$experience = [
+    [
+        "organization" => "BHANTAL IPAM–USL (Student-led Non-profit Organisation)",
+        "role" => "Education Secretary",
+        "duration" => "July 2025 – Present",
+        "responsibilities" => [
+            "Leading academic programmes and promoting BHANTAL’s values through educational engagement."
+        ]
+    ],
+    [
+        "organization" => "BHANTAL IPAM–USL (Student-led Non-profit Organisation)",
+        "role" => "Innovation Officer",
+        "duration" => "August 2024 – July 2025",
+        "responsibilities" => [
+            "Drove technology-based initiatives to enhance student engagement and organisational impact."
+        ]
+    ]
+];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +85,7 @@
             margin: 0;
             padding: 0;
             font-family: "Segoe UI", Arial, sans-serif;
-            background: background: #f9f9f9;
+            background: #f9f9f9;
             color: #3b2f2f;
         }
 
@@ -21,14 +97,14 @@
 
         /* Top grey circle */
         .top-circle {
-        position: absolute;
-        width: 320px;
-        height: 320px;
-        background: #d9d9d9;
-        border-radius: 50%;
-        top: -160px;
-        right: -160px;
-        z-index: 1;
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            background: #d9d9d9;
+            border-radius: 50%;
+            top: -160px;
+            right: -160px;
+            z-index: 1;
         }
 
         /* Profile image */
@@ -142,12 +218,12 @@
     <div class="top-circle"></div>
 
     <div class="profile-image">
-        <img src="My_Image.png" alt="Profile Picture">
+        <img src="<?php echo $profile_image; ?>" alt="Profile Picture">
     </div>
 
     <div class="header">
-        <div class="name">ALHAJI IBRAHIM<br>JALLOH</div>
-        <div class="title">BSc (Hons) Information<br>Systems Graduate (First Class)</div>
+        <div class="name"><?php echo $name; ?></div>
+        <div class="title"><?php echo $title; ?></div>
     </div>
 
     <div class="content">
@@ -157,38 +233,33 @@
 
             <div class="section">
                 <h2>CONTACT</h2>
-                <p>+232 80003035</p>
-                <p>alhajiibrahimjalloh55@gmail.com</p>
-                <p>Freetown, Sierra Leone</p>
+                <p><?php echo $phone; ?></p>
+                <p><?php echo $email; ?></p>
+                <p><?php echo $location; ?></p>
             </div>
 
             <div class="section">
                 <h2>EDUCATION</h2>
-
-                <h3>Bachelor of Science With<br>Honours in Information Systems</h3>
-                <p class="subtle">IPAM - University of Sierra Leone</p>
-                <p class="subtle">2021 - 2025 (Graduated December 2025)</p>
-
-                <h3 style="margin-top:20px;">BECE and WASSCE</h3>
-                <p class="subtle">Holy Trinity Secondary School,<br>Kenema</p>
-                <p class="subtle">2015 - 2021</p>
+                <?php foreach($education as $edu): ?>
+                    <h3><?php echo $edu['degree']; ?></h3>
+                    <p class="subtle"><?php echo $edu['school']; ?></p>
+                    <p class="subtle"><?php echo $edu['years']; ?></p>
+                <?php endforeach; ?>
             </div>
 
             <div class="section">
                 <h2>SKILLS</h2>
                 <ul>
-                    <li>Web Development</li>
-                    <li>Database Management</li>
-                    <li>Problem-Solving and Critical Thinking</li>
-                    <li>Leadership & Team Coordination</li>
-                    <li>Microsoft Office Suite</li>
+                    <?php foreach($skills as $skill): ?>
+                        <li><?php echo $skill; ?></li>
+                    <?php endforeach; ?>
                 </ul>
 
                 <h3>Languages</h3>
                 <ul>
-                    <li>Fula (Native)</li>
-                    <li>English (Fluent)</li>
-                    <li>Krio (Fluent)</li>
+                    <?php foreach($languages as $lang): ?>
+                        <li><?php echo $lang; ?></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
 
@@ -199,38 +270,22 @@
 
             <div class="section">
                 <h2>PROFILE</h2>
-                <p style=" font-size: 15.4px; ">
-                    A motivated and results-driven BSc (Hons) Information Systems (First Class)
-                    graduate from the Institute of Public Administration and Management (IPAM)–University
-                    of Sierra Leone, with a strong interest in technology, innovation, and continuous learning.
-                    As one of the youngest graduates in my cohort, I demonstrate adaptability, resilience,
-                    and a proactive approach to problem-solving.
-                </p>
-                <p style=" font-size: 15.4px; ">
-                    I have a solid academic foundation in web development, database management, and
-                    information systems, developed through university coursework, self-directed learning,
-                    and hands-on tutorials. I am highly organised, a strong team player, and proficient
-                    in the Microsoft Office Suite, enabling me to contribute effectively in both technical
-                    and professional environments.
-                </p>
+                <?php foreach($profile_paragraphs as $para): ?>
+                    <p style=" font-size: 15.4px; "><?php echo $para; ?></p>
+                <?php endforeach; ?>
             </div>
 
             <div class="section">
                 <h2>EXPERIENCE</h2>
-
-                <h3>BHANTAL IPAM–USL (Student-led Non-profit Organisation)</h3>
-
-                <p><strong>Education Secretary</strong><br>
-                July 2025 – Present</p>
-                <ul>
-                    <li>Leading academic programmes and promoting BHANTAL’s values through educational engagement.</li>
-                </ul>
-
-                <p><strong>Innovation Officer</strong><br>
-                August 2024 – July 2025</p>
-                <ul>
-                    <li>Drove technology-based initiatives to enhance student engagement and organisational impact.</li>
-                </ul>
+                <?php foreach($experience as $exp): ?>
+                    <h3><?php echo $exp['organization']; ?></h3>
+                    <p><strong><?php echo $exp['role']; ?></strong><br><?php echo $exp['duration']; ?></p>
+                    <ul>
+                        <?php foreach($exp['responsibilities'] as $res): ?>
+                            <li><?php echo $res; ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endforeach; ?>
             </div>
 
         </div>
