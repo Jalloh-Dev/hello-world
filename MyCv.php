@@ -80,22 +80,22 @@
             box-sizing: border-box;
         }
 
-.right-column {
-    width: 50%;
-    padding-left: 40px;
-    box-sizing: border-box;
-    position: relative; 
-}
-
-.right-column::before {
-    content: "";
-    position: absolute;
-    left: 0; 
-    top: 30px;
-    height: 85%;
-    width: 2px;
-    background-color: #6f625c;
-}
+        .right-column {
+            width: 50%;
+            padding-left: 40px;
+            box-sizing: border-box;
+            position: relative; 
+        }
+        
+        .right-column::before {
+            content: "";
+            position: absolute;
+            left: 0; 
+            top: 30px;
+            height: 85%;
+            width: 2px;
+            background-color: #6f625c;
+        }
 
         h2 {
             font-size: 18px;
