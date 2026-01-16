@@ -74,17 +74,27 @@
         }
 
         .left-column {
-            width: 45%;
+            width: 50%;
             padding-right: 40px;
             box-sizing: border-box;
         }
 
-        .right-column {
-            width: 55%;
-            padding-left: 40px;
-            box-sizing: border-box;
-            border-left: 2px solid #6f625c;
-        }
+.right-column {
+    width: 50%;
+    padding-left: 40px;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+.right-column::before {
+    content: "";
+    position: absolute;
+    left: 0; 
+    top: 30px;
+    height: 85%;
+    width: 2px;
+    background-color: #6f625c;
+}
 
         h2 {
             font-size: 18px;
@@ -188,14 +198,14 @@
 
             <div class="section">
                 <h2>PROFILE</h2>
-                <p>
+                <p style=" font-size: 15.4px; ">
                     A motivated and results-driven BSc (Hons) Information Systems (First Class)
                     graduate from the Institute of Public Administration and Management (IPAM)–University
                     of Sierra Leone, with a strong interest in technology, innovation, and continuous learning.
                     As one of the youngest graduates in my cohort, I demonstrate adaptability, resilience,
                     and a proactive approach to problem-solving.
                 </p>
-                <p>
+                <p style=" font-size: 15.4px; ">
                     I have a solid academic foundation in web development, database management, and
                     information systems, developed through university coursework, self-directed learning,
                     and hands-on tutorials. I am highly organised, a strong team player, and proficient
